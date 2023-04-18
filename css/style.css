@@ -1,0 +1,28 @@
+#img-thumbnail{
+    width: 200px;
+    height: 200px;
+}
+
+#table-content{
+    max-width: 200px;
+}
+
+#description_2{
+    max-width: 600px;
+}
+
+#description_3{
+    max-width: 750px;
+}
+
+td, th{
+    vertical-align: top;
+}
+
+table{
+   
+    border-spacing: 25px 5px;
+    table-layout: auto;
+    
+}
+
