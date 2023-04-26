@@ -35,7 +35,7 @@ body{
     /* 
         you can change this later on in a seperate media query 
     */
-    position: absolute;
+    position: fixed;
     font-family: Verdana, Geneva, Tahoma, sans-serif;  
     width: 100%;
     height: 100%;
@@ -55,9 +55,13 @@ ul{
     
 }
 
-.section-1-text, .homepage-links a:link{
-   text-decoration: none;
+.section-1-text{
+   
    color: white;        
+}
+
+a:link{
+    text-decoration: none;
 }
 
 .section-1-text > h1, .section-1-text > h3, .section-1-text > h4{
@@ -97,10 +101,47 @@ ul{
     width: 100%;
     min-width: 400px;
     height: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-color: #fcba03;
 }
 
 .homepage-links{
     display: flex;
     gap: 1em;
+}
+
+.nav-body{
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.nav-body img{
+    width: 64px;
+    height: auto;
+}
+
+.nav-header {
+    color: white;
+    padding-right: 1em;
+    
+}
+
+.nav-header a{
+    color: white;
+    font-size: 0.8em;
+    padding: 1em;
+    font-weight: 900;
+}
+
+button{
+    color: white;
+    background-color: #fcba03;
+    border: none;
+    font-size: 1em;
+    font-weight: 1000;
+    padding: 0.5em 0.8em;
 }
 
