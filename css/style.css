@@ -76,7 +76,8 @@ ul{
 }
 
 .left-side, .right-side{
-    flex-basis: 100%;    
+    flex-basis: 100%;  
+    min-width: 400px;  
 }
 
 .left-side{
