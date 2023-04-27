@@ -84,17 +84,24 @@ a:link{
 
 .section-2{
     display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-style: inset;
+    border-color: #fcba03;
 }
 
 .body-content{
-    display: flex;      
+    display: flex;   
+    height: 80%;   
 }
 
 .container{
     position:fixed;
     height: 100%;
     overflow-y: scroll;
-    max-height: 100%;    
+    max-height: 100%;  
+    width: 100%;  
 }
 
 .left-side, .right-side{
@@ -123,13 +130,38 @@ a:link{
 }
 
 .tarvern_img{
-    width: 100%;
-    min-width: 400px;
-    height: auto;
-    overflow: hidden;
-    border-style: inset;
-    border-color: #fcba03;
+    
+    background-image: url("/images/The_tavern.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;    
 }
+
+#glazed_chicken{
+    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url("/images/glazedChicken_1.png");    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;            
+    display: none;
+}
+
+#rice_chicken{
+    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url("/images/ready-chickenrice.png");  
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;            
+    display: none;
+}
+
+#pork{
+    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url("/images/pork.jpg");  
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;            
+    display: none;
+}
+
 
 .homepage-links{
     display: flex;    
@@ -141,6 +173,10 @@ a:link{
     
 }
 
+.homepage-links a{
+    color: #642e08;
+}
+
 .homepage-links .button-radiusL{
     border-bottom-left-radius: 5px;    
 }
@@ -149,8 +185,8 @@ a:link{
     border-bottom-right-radius: 5px;
 }
 
-.homepage-links a{
-    line-height: 100%;
+.homepage-links a:hover{
+    color: #e2670f;
 }
 
 .nav-body {
@@ -170,7 +206,7 @@ a:link{
 }
 
 .nav-header {
-    color: white;
+    color: rgb(230, 228, 228);
     padding-right: 1em;
     
 }
@@ -193,4 +229,9 @@ button{
 .nav-button-2, .nav-button{
     background-color: #B15613;
 }
+
+
+
+
+
 
