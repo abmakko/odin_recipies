@@ -91,6 +91,14 @@ a:link{
     border-color: #fcba03;
 }
 
+.section-2 h1{
+    background-color: #A87C02;
+    color: #642e08;
+    text-align: center;
+    margin: 0px;
+    font-weight: 900;
+}
+
 .body-content{
     display: flex;   
     height: 80%;   
@@ -145,6 +153,8 @@ a:link{
     height: 100%;            
     display: none;
 }
+
+
 
 #rice_chicken{
     background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url("/images/ready-chickenrice.png");  
