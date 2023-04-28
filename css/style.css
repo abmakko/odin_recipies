@@ -29,18 +29,26 @@ table{
 html, body{
     margin: 0px;
     height: 100%;
+    width: 100%;
+    
     
 }
+
+html{
+    scrollbar-color: white black;
+    scrollbar-width: 2em;
+}
+
 
 .background{   
     /* 
         you can change this later on in a seperate media query 
     */
-    
-    min-height: 100%;
+    min-height: 700px;
+    height: inherit;
     font-family: Verdana, Geneva, Tahoma, sans-serif;  
     width: 100%;
-    height: 100%;
+    
     
     
     background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url(/images/asgard_cover.jpeg) no-repeat center center fixed; 
@@ -50,6 +58,9 @@ html, body{
   background-size: cover;
 }
 
+.logo{
+    padding-left: 0.5em;
+}
 
 ul{
     list-style: none;
@@ -102,14 +113,15 @@ a:link{
 
 .body-content{
     display: flex;   
-    height: 80%;  
-    min-height: 344px;     
+     height: 100px;
+    min-height: 500px;   
+    padding-top: 2em; 
 }
 
 .container{
-    position:fixed;
+    
     height: 100%;
-    overflow-y: scroll;
+    
     max-height: 100%;  
     width: 100%;  
 }
@@ -220,7 +232,8 @@ a:link{
 .nav-header {
     color: rgb(230, 228, 228);
     padding-right: 1em;
-    
+    display: flex;
+    align-items: center;
 }
 
 .nav-header a{
@@ -230,10 +243,10 @@ a:link{
     font-weight: 900;
 }
 
-button{
+.container button{
     color: white;    
     border: none;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 1000;
     padding: 0.5em 0.8em;
 }
@@ -242,24 +255,268 @@ button{
     background-color: #B15613;
 }
 
+.nav-header .menu-button{
+    display: none;
+    padding: 0.1em 0.5em ;
+    background-color:#e9ab03;
+    
+}
+
+
+@media screen and (max-width: 500px) {
+    svg{
+        display: none;
+    }
+}
+
+@media screen and (min-height: 1000px) {
+
+    .background{
+        max-height: 500px;
+    } 
+}
+
+@media screen and (max-width: 350px) {
+    .body-content{
+        flex-shrink: 0;
+        min-width: 350px;
+        
+    }
+
+    .container{
+        flex-shrink: 0;
+        min-width: 350px;
+    }
+
+    .background{
+        flex-shrink: 0;
+        min-width: 350px;
+    }
+
+    .nav-body{
+        flex-shrink: 0;
+        min-width: 350px;
+    }
+
+    body{
+        min-width: 350px;
+    }
+}
 
 @media screen and (max-width: 875px){
     .body-content{
         flex-direction: column;
         height: 100%;
+        
+        min-height: 700px;
+        gap: 0em;
+    }
+
+    .background{
         min-height: 900px;
+    }
+    .container{
+        min-height: 100%;
     }
 
     .left-side, .right-side{
         padding: 0px 10px 0px 10px;
-        min-height: 400px;  
-        height: 100%;      
+        flex-basis: 300px;
+        height: 100%; 
+        max-width: 600px;     
     }
 
+    .left-side{
+        margin: 0px;
+        flex-shrink: 1;
+        min-height: 300px;
+        min-width: 300px;
+    }
+
+    .right-side{
+        min-height: 450px;
+        height: auto;
+        min-width: 300px;
+    }
+
+    .nav-header{
+        gap: 0.5em;
+
+    }
     .body, .html{
-        font-size: 0.5em;
+        font-size: 0.5rem;
+    }
+
+    .nav-header .menu-button{
+        display: block;
+    }
+
+    .nav-header .nav-links{
+        
+        display: none;
     }
 }
+
+
+
+.asgard-heroes > *{
+    scroll-snap-align: start;
+}
+
+.asgard-heroes::-webkit-scrollbar{
+    width:0;
+}
+
+.scroll-button, #right-arrow{
+    display: flex;
+    align-items: center;
+}
+
+#right-arrow .icon{
+    padding: 0em;
+    background: none;
+    border: none;
+    position: absolute;  
+    z-index: 5; 
+    right: 0;  
+    color: white;
+    cursor: pointer;
+    
+}
+
+.scroll-button .icon{
+    padding: 0em;
+    border: none;
+    position: absolute;
+    background: none;
+    color: white;
+    cursor: pointer;
+    z-index: 5;
+    
+}
+
+#scroll-button-1{
+    pointer-events:none;
+}
+
+.icon{
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.925));  
+}
+
+.icon:hover{
+    filter: drop-shadow(3px 3px 2px rgba(238, 236, 236, 0.925));
+}
+
+
+.asgard-heroes .heroes{
+    min-width: 300px;
+    height: 470px;
+    box-shadow: 2px 2px 5px rgba(247, 245, 245, 0.6), -2px -2px 5px rgba(252, 252, 252, 0.6),
+    -2px 2px 5px rgba(255, 255, 255, 0.6), 2px -2px 5px rgba(255, 255, 255, 0.6);
+}
+
+.body-section-2{
+    
+    min-height: 560px;
+    background-color: black;
+    padding-bottom: 2em;
+    padding-left:0.5em;
+}
+
+.scroll-div{
+    width: auto;
+    height: auto;
+    max-height: 550px;
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;    
+}
+
+
+.asgard-heroes{    
+    display: flex;
+    gap: 1em; 
+    flex-wrap: nowrap;
+    min-height: 500px; 
+    overflow: auto;
+    align-items: center;
+    scrollbar-width: none;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: inline mandatory;  
+    scroll-behavior: smooth;
+}
+
+.scroll-div::-webkit-scrollbar{
+ width:0;
+}
+
+.scroll-cover{
+    position: relative;
+    overflow: auto;
+}
+
+.heroes{
+    overflow: hidden;
+}
+
+
+
+#thor > .img{
+    background-image: url("/images/Thor.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%;  
+}
+
+#volstagg > .img{
+    background-image: url("/images/Beta_Ray_Bill.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%; 
+}
+
+#brunnhilde > .img{
+    background-image: url("/images/Brunnhilde.jpg");    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%; 
+}
+
+#loki > .img{
+    background-image: url("/images/Kid-Loki.jpg");    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%; 
+}
+
+#Beta_Ray_Bill > .img{
+    background-image: url("/images/Volstagg.jpg");    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%; 
+}
+
+#lady_sif > .img{
+    background-image: url("/images/LadySif.jpg");    
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100%; 
+}
+
+.section-title > h2{
+    text-align: center;
+    
+    margin: 0px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    font-weight: 1000;
+    padding: 1em;
+}
+
+
 
 
 

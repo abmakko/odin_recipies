@@ -9,6 +9,11 @@ const img_2 = document.getElementById('rice_chicken');
 const button_3 = document.getElementById('b-three');
 const img_3 = document.getElementById('pork');
 
+const left_arrow = document.getElementById("left-arrow")
+const right_arrow = document.getElementById("right-button")
+
+var scrolling = document.querySelector("#scroller");
+
 button_1.addEventListener('mouseover', function handleMouseOver(){
     img_1.style.display = 'block';
     default_img.style.display = 'none';    
@@ -50,3 +55,14 @@ button_3.addEventListener('mouseout', function handleMouseOut(){
     img_2.style.display = 'none';
     img_3.style.display = 'none';
 });
+
+left_arrow.addEventListener('click', function handleClick(){
+    scrolling.scrollBy(-150,0);
+    console.log("whatera");
+})
+
+right_arrow.addEventListener('click', function handleClick(){
+    scrolling.scrollBy(150,0);
+    console.log("whaterrereaeeeee");
+})
+
