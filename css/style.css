@@ -518,5 +518,150 @@ a:link{
 
 
 
+/* Section three of page*/
 
+.body-section-3{
 
+    min-height: 500px;
+    min-width: 300px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    width: 100%;   
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    background: url(/images/thunder-light.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.section-3-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1em;
+    padding: 3em;
+    min-width: 250px;
+    max-width: 700px;
+    background-color: rgba(0, 0, 0, 0.425);
+}
+
+.body-section-3 h4{
+    align-self: flex-end;
+    color: white;
+}
+
+.body-section-3 p{
+    margin: 0;
+    font-size: 1.1em;
+    font-style: italic;
+    color: white;  
+    line-height: 1.5em;  
+    
+}
+
+.body-section-4{
+    background-color: rgb(31,41,55);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.section-4-content{
+    border-radius: 1em;
+    min-height: 200px;
+    width: 90%;
+    display: flex;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    justify-content: space-around;    
+    gap: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    min-width: 300px;
+    flex-shrink: 3;
+    align-items: center;
+    gap: 1em;
+    background: url(/images/nightsky.jpeg)no-repeat center center fixed; 
+    
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.section-4-content .left-panel{
+    min-width: 590px;
+}
+
+@media screen and (max-width:550px) {
+    .body-section-4 > .section-4-content h1{
+        font-size: 1.3em;
+    }
+    
+    .body-section-4 > .section-4-content h2{
+        font-size: 0.9em;
+    }
+
+}
+
+@media screen and (max-width:950px) {
+    .section-4-content{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .body-section-4 h1{
+        font-size: 1.6em;
+        text-align: center;
+    }
+    
+    .body-section-4 h2{
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .section-4-content .left-panel {
+        min-width: 250px;
+    }
+
+    .right-panel .enlist-btn{
+        font-size: 1.3em;
+    }
+
+    .body-section-3 p{
+        font-size: 0.9em;
+    }
+}
+
+.body-section-4 h1{
+    margin: 0;
+    color: white;
+}
+
+.body-section-4 h2{
+    margin: 0;
+    color: white;
+}
+
+.enlist-btn{
+    min-width: 200px;
+    width: 250px;
+    font-size: 2em;
+    padding: 0.2em 0.5em;
+    font-weight: 900;
+    background-color: #FCBA03;
+    color: white;
+}
+
+div > footer{
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 1em;
+    font-style: oblique;
+}

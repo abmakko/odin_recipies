@@ -58,11 +58,11 @@ button_3.addEventListener('mouseout', function handleMouseOut(){
 
 left_arrow.addEventListener('click', function handleClick(){
     scrolling.scrollBy(-150,0);
-    console.log("whatera");
+    
 })
 
 right_arrow.addEventListener('click', function handleClick(){
     scrolling.scrollBy(150,0);
-    console.log("whaterrereaeeeee");
+    
 })
 
