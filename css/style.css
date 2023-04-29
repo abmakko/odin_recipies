@@ -51,7 +51,7 @@ html{
     
     
     
-    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url(/images/asgard_cover.jpeg) no-repeat center center fixed; 
+    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url(../images/asgard_cover.jpeg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -153,7 +153,7 @@ a:link{
 
 .tarvern_img{
     
-    background-image: url("/images/The_tavern.jpg");
+    background-image: url("../images/The_tavern.jpg");
     
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -161,7 +161,7 @@ a:link{
 }
 
 #glazed_chicken{
-    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url("/images/glazedChicken_1.png");    
+    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url("../images/glazedChicken_1.png");    
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%;            
@@ -171,7 +171,7 @@ a:link{
 
 
 #rice_chicken{
-    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url("/images/ready-chickenrice.png");  
+    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url("../images/ready-chickenrice.png");  
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%;            
@@ -179,7 +179,7 @@ a:link{
 }
 
 #pork{
-    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url("/images/pork.jpg");  
+    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url("../images/pork.jpg");  
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%;            
@@ -521,7 +521,7 @@ a:link{
 
 
 #thor > .img{
-    background-image: url("/images/Thor.jpg");
+    background-image: url("../images/Thor.jpg");
     
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -529,7 +529,7 @@ a:link{
 }
 
 #volstagg > .img{
-    background-image: url("/images/Beta_Ray_Bill.jpg");
+    background-image: url("../images/Beta_Ray_Bill.jpg");
     
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -537,28 +537,28 @@ a:link{
 }
 
 #brunnhilde > .img{
-    background-image: url("/images/Brunnhilde.jpg");    
+    background-image: url("../images/Brunnhilde.jpg");    
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%; 
 }
 
 #loki > .img{
-    background-image: url("/images/Kid-Loki.jpg");    
+    background-image: url("../images/Kid-Loki.jpg");    
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%; 
 }
 
 #Beta_Ray_Bill > .img{
-    background-image: url("/images/Volstagg.jpg");    
+    background-image: url("../images/Volstagg.jpg");    
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%; 
 }
 
 #lady_sif > .img{
-    background-image: url("/images/LadySif.jpg");    
+    background-image: url("../images/LadySif.jpg");    
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100%; 
@@ -588,7 +588,7 @@ a:link{
     justify-content: center;
     display: flex;
 
-    background: url(/images/thunder-light.jpeg) no-repeat center center fixed; 
+    background: url(../images/thunder-light.jpeg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -644,7 +644,7 @@ a:link{
     flex-shrink: 3;
     align-items: center;
     gap: 1em;
-    background: url(/images/nightsky.jpeg)no-repeat center center fixed; 
+    background: url(../images/nightsky.jpeg)no-repeat center center fixed; 
     
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -720,6 +720,7 @@ div > footer{
     color: white;
     background-color: black;
     text-align: center;
-    padding: 1em;
+    padding: 0.3em;
     font-style: oblique;
+    font-size: 0.8em;
 }
