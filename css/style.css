@@ -255,12 +255,33 @@ a:link{
     background-color: #B15613;
 }
 
+.nav-header .dropdown{
+    display: none;
+}
+
 .nav-header .menu-button{
     display: none;
     padding: 0.1em 0.5em ;
     background-color:#e9ab03;
     
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 130px;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 
 
 @media screen and (max-width: 500px) {
@@ -311,6 +332,21 @@ a:link{
         min-height: 700px;
         gap: 0em;
     }
+
+    .nav-header .dropdown{
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        }
+
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+        }
 
     .background{
         min-height: 900px;
