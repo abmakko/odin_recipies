@@ -1,0 +1,214 @@
+@font-face {
+    font-family: Norse-Bold;
+    src: url("./Norse-Bold.otf") format("opentype");
+}
+
+
+.background-container{   
+    /* 
+        you can change this later on in a seperate media query 
+    */
+
+    min-height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    width: min-content;
+    min-width: 100%;
+    
+    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url(../images/asgard_cover.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+button{
+    color: white;    
+    border: none;
+    font-size: 1rem;
+    font-weight: 1000;
+    padding: 0.5em 0.8em;
+}
+
+.form-container{
+    display: flex;
+    min-height: 500px;    
+    width: 70%;
+    min-width: 700px;
+    margin: auto;
+    box-shadow: 0px 0px 10px 2px #050505bd;
+    border-radius: 1em;
+}
+
+.form-title{
+    display: flex;
+    flex-basis: 30%;
+    position: relative;
+    align-items: center;   
+    padding: 0.3em;
+    top: 90px;
+    gap: 0.5em;
+    height: fit-content;
+    justify-content: center;
+    font-family: Norse-Bold;
+    color: white;
+    font-weight: 900;
+    font-size: 1.3em;
+    background-color: #1f1e1ebd;
+}
+
+.form-contents{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-basis: 70%;
+    position: relative;
+    background-color: #1f1e1ebd;
+    border-top-right-radius:  1em;
+    border-bottom-right-radius:  1em;
+}
+
+.form-heading, h1{
+    margin: 0px;
+    color: white;    
+}
+
+.form-heading{
+    padding: 2em; 
+    top: 70px;   
+    position: absolute;
+}
+
+.form-heading h1{
+    margin: 0px;    
+    font-weight: 1000;
+    font-size: clamp(1.5rem, 3vw, 1.7rem);
+}
+
+.form-heading h2{
+    margin: 0px;   
+    font-weight: 900; 
+    font-size: 1.2rem;
+}
+
+.form-fields-background{
+    background-color: rgba(17, 17, 17, 0.863);
+    height: min-content;
+    position: relative;
+    padding: 3em 6em 2em 2em;
+    display: flex;
+    top: 160px;
+    width: 70%;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.form-body{
+    width: 100%;
+    position: relative;
+}
+
+label{
+    color: white;
+    
+}
+
+.name-fields, .email-fields, .password-fields{
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2em;
+}
+
+
+.text-input{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 0.2rem;
+    min-width: 200px;
+    width: 80%;
+}
+
+.radio-field{
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+.radio-field label{
+    font-size: 0.9em;
+    font-weight: bold;
+    
+}
+
+input[id="loki"]{
+    accent-color: black;
+    background-color: black;
+    color: black;
+    
+    
+}
+
+
+input[id="thor"]{
+    accent-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.radio-option{
+    display: flex;    
+    align-items: center;
+    justify-content: flex-start;
+    height: 30px;
+    width: 100px;    
+    border-radius: 0.5em;
+
+}
+
+.radio-option:nth-child(1){
+    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918));
+    
+}
+
+.radio-option:nth-child(2){
+    
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.856), rgba(167, 164, 164, 0.918));
+}
+
+.radio-option:nth-child(2):hover{
+
+    box-shadow: 0px 0px 2px 2px white;
+}
+
+.radio-option:nth-child(1):hover{
+    box-shadow: 0px 0px 2px 2px black;
+}
+
+.radio-option:nth-child(2) label{
+    color: black;
+}
+
+.radio-option label, input{
+    cursor: pointer;
+}
+
+.form-body .button-div{
+    position: relative;
+    top: 35%;
+    width: fit-content;
+    left: 35px;
+}
+
+.button-div button{
+    border-radius: 0.5em;
+    width: 150px;
+    background-color: #B15613;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.15em;
+}
+
+.button-div button:hover{
+    border-color: white;
+    cursor: pointer;
+}
