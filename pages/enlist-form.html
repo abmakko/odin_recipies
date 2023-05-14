@@ -39,7 +39,7 @@
             </div>      
         <div class="form-container">            
             <div class="form-title">
-                <img src="../images/odin-lined.png" height = "60px" alt="">
+                <div class="odin-logo"></div>
                 <h1>ODIN</h1>
             </div>
             <div class="form-contents">
@@ -51,33 +51,34 @@
                             <div class="name-fields">
                                 <div style="display: flex; flex-direction: column;">
                                 <label style ="font-size: 0.7rem;" for="first-name">FIRST NAME</label>
-                                <input class ="text-input" type="text" name="first-name" id="first-name">
+                                <input class ="text-input" type="text" name="first-name" id="first-name" required>
                                 </div>
                                 <div style="display: flex; flex-direction: column;">
                                 <label style ="font-size: 0.7rem;" for="last-name">LAST NAME</label>
-                                <input class ="text-input" type="text" name="last-name" id="last-name">
+                                <input class ="text-input" type="text" name="last-name" id="last-name" required>
                                 </div>
                             </div>
 
                             <div class="email-fields">
                                 <div style="display: flex; flex-direction: column;">
                                 <label style ="font-size: 0.7rem;" for="email">EMAIL</label>
-                                <input class ="text-input" type="text" name="email" id="email">
+                                <input class ="text-input" type="email" name="email" id="email" oninvalid="this.setCustomValidity('Please Enter valid email')"
+                                oninput="setCustomValidity('')" required>
                                 </div>
                                 <div style="display: flex; flex-direction: column;">
                                 <label style ="font-size: 0.7rem;" for="phone-num">PHONE NO.</label>
-                                <input class ="text-input" type="text" name="phone-num" id="phone-num">
+                                <input class ="text-input" type="text" name="phone-num" id="phone-num" required>
                                 </div>
                             </div>
 
                             <div class="password-fields">
                                 <div style="display: flex; flex-direction: column;">
                                 <label style ="font-size: 0.7rem;" for="password">PASSWORD</label>
-                                <input class ="text-input" type="password" name="password" id="password">
+                                <input class ="text-input" type="password" name="password" id="password" required>
                                 </div>
                                 <div style="display: flex; flex-direction: column;">
                                 <label style ="font-size: 0.7rem;" for="confirm-pass">CONFIRM PASSWORD</label>
-                                <input class ="text-input" type="password" name="confirm-pass" id="confirm-pass">
+                                <input class ="text-input" type="password" name="confirm-pass" id="confirm-pass" required>
                                 </div>
                             </div>
                             <div class="radio-field">
@@ -92,12 +93,14 @@
                             </div>
                     </div>
                     <div class="button-div">
-                    <button type="submit">Submit</button>
+                    <button id="submit-btn" type="submit">Submit</button>
                     <p>Already have an Account?<a href=""><span> sign in</span></a></p>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+    <script src="../scripts/form.js"></script>
 </body>
 </html>
