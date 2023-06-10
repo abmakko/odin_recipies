@@ -1,0 +1,379 @@
+.background-library{   
+    /* 
+        you can change this later on in a seperate media query 
+    */
+    
+    height: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    width: auto;
+    min-width: 100%;
+    
+    background: linear-gradient(0deg, rgba(252, 249, 249, 0.068), rgba(0, 0, 0, 0.918)), url(../images/odins_library5.webp) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.book-section-title h2{
+    color: white;
+    position: relative;
+    text-align: left;
+    margin: 0;
+    font-weight: 1000;
+}
+
+.book-section-title{
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: 1rem;
+    padding-left: 0.5rem;
+    position: relative;
+    top: 15px;
+    height: fit-content;
+    
+}
+
+.added-section .book-section-title{
+    background-color: rgb(68, 45, 3);
+}
+
+.books-body{
+    display: grid;
+    grid-template-areas: 
+    'fav'
+    'added';
+    position: relative;
+}
+
+
+
+.favourite-section{
+    grid-area: fav;
+    height: 400px;
+    overflow: auto;
+    overflow-y: hidden;
+    flex-direction: column;
+    display: flex;
+    margin: 0;
+}
+
+.added-section{
+    grid-area: added;
+    height: fit-content;
+    background-color: #6d4614;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    width: auto;
+    display: grid;
+    gap: 2rem;
+    position: relative;
+    
+}
+
+.book-scroll-div{
+    width: auto;
+    height: auto;
+    max-height: 320px;
+    display: flex;
+    align-items: center;    
+    justify-content: space-between; 
+}
+
+.book-scroller{
+    display: flex;
+    gap: 1em; 
+    flex-wrap: nowrap;
+    min-height: 250px; 
+    overflow: auto;
+    padding: 1rem;
+    align-items: center;
+    scrollbar-width: none;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: inline mandatory;  
+    scroll-behavior: smooth;
+    color: white;
+}
+
+
+
+.book-scroller > *{
+    scroll-snap-align: start;
+}
+
+.book-scroller::-webkit-scrollbar{
+    width:0;
+}
+
+.book-scroller .books{
+    min-width: 200px;
+    height: 250px;
+    
+}
+
+.books{
+    overflow: hidden;
+    background: linear-gradient(#e66465, #9198e5);
+    padding: 10px 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 5px solid rgb(68, 45, 3);;
+    position: relative;
+}
+
+.books h3{
+    margin: 0;
+    display: block;
+    display: -webkit-box;
+    max-height: 110px;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: clip;
+    word-wrap: break-word;
+}
+
+.book-title{
+    color: white;
+    font-weight: 1000;
+    font-size: 2rem;
+}
+
+.book-title-2{
+    color: white;
+    font-weight: 1000;
+    font-size: 1.4rem;
+}
+
+.books-fav:hover{
+    height: 260px;
+}
+
+
+.books:hover{
+    cursor: pointer;
+    
+    box-shadow: 2px 2px 5px rgba(255, 191, 107, 0.6), -2px -2px 5px rgba(252, 191, 61, 0.6),
+    -2px 2px 5px rgba(252, 192, 63, 0.6), 2px -2px 5px rgba(238, 192, 107, 0.6);
+}
+
+.scroller-button, #right-arrow{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    
+}
+
+#right-arrow{
+    right: 0;
+}
+
+#right-arrow .icon{
+    padding: 0em;
+    background: none;
+    border: none;
+    position: absolute;  
+    z-index: 5; 
+    right: 0; 
+    
+    color: rgba(255, 255, 255, 0.301);
+    cursor: pointer;
+    
+}
+
+.scroller-button .icon{
+    padding: 0em;
+    border: none;
+    position: absolute;
+    background: none;
+    color: rgba(255, 255, 255, 0.301);
+    cursor: pointer;
+    z-index: 5;
+    
+}
+
+.add-box{
+    width: 200px;
+    height: 250px;
+    padding: 5px;
+    border: 2px dashed white;
+    z-index: 1;
+    display: flex;
+    position: relative;
+    
+}
+
+.submit-books{
+    margin: auto;
+    background-color: rgba(252, 154, 26, 0.6);
+    cursor: pointer;   
+    position: relative; 
+}
+
+.submit-books:hover{
+    box-shadow: 0px 0px 5px rgba(253, 249, 244, 0.6);
+}
+
+.suggestion-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    gap: 1rem;
+    grid-auto-rows: 250px;
+    min-height: 300px;
+    padding: 2rem;
+    }
+
+.add-box .form-box{
+    position: absolute;    
+    
+    margin: auto;
+    
+    height: fit-content;
+    width: fit-content;
+    background-color: white;
+    color: black;
+    border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+    flex-direction: column;
+    display: none;
+    
+}
+
+.book-form{
+    background-color: white;
+    padding: 1rem;
+}
+
+.form-head{
+    color: black;
+}
+
+.form-head h3{
+    margin: 0;
+    text-align: center;
+    
+    padding-top: 1rem;
+}
+
+body{
+    position: relative;
+}
+
+.form-foot{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 0.2rem;
+}
+
+#submit-btn{
+    background-color: #6d4614;
+}
+
+#submit-btn:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 4px rgb(250, 172, 71);
+}
+
+.book-desc{
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-desc p{
+    margin: 0;    
+    text-overflow: ellipsis;
+    overflow: clip;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.new-books{
+    
+    background: url(../images/iconsMinus.png);
+    position: absolute;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    top: 3px;
+    right: 3px;
+}
+
+.new-books:hover{
+    background-size: 22px 22px;
+    width: 22px;
+    height: 22px;
+}
+
+.toggle{
+    position: relative;
+}
+
+.toggle .input-checkbox{
+    appearance: none;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 20px;
+    background-color: var(--toggle-color, brown);
+    outline: none;
+    cursor: pointer;
+    outline: auto;
+    margin-top: 0.2rem;
+}
+
+.input-checkbox::before{
+    position: absolute;
+    content: var(--toggle-text, "UNREVIEWED");
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 1000;
+    top: 55%;
+    left: var(--left-toggle, 60px); 
+    right: var(--right-toggle, -15px);
+    transform: translate(-50%, -50%);
+}
+
+.input-checkbox::after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    
+    
+    width: 50px;
+    height: 20px;
+    background-color: white;
+    outline: auto;
+    transition: left .2s;
+
+}
+
+.input-checkbox:checked::after{
+    left: 25px;
+    right: 80%;
+    width: 50px;
+    height: 20px;
+}
+
+.input-checkbox:valid{
+    border: none;
+}
+
+
+.overlay-span {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+

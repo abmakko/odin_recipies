@@ -1,106 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enlist Form</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/form.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-</head>
-<body>
-    <div class="background-container">  
-        <div class="nav-body">
-            <div class="logo">
-                <a href="../index.html"><img src="../images/roast-chicken.png"></a>
-            </div>
-
-            <nav class="nav-header">
-                <div class="dropdown">
-                    <button class="menu-button">
-                    <span class="material-symbols-outlined">menu</span>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Home</a>
-                        <a href="#">About</a>
-                        <a href="#">Lore</a>
-                        <a href="#">Tournaments</a>
-                    </div>
-                </div>
-                <div class="nav-links">
-                <a href="../index.html">HOME</a> |
-                <a href="">LORE</a> |                
-                <a href="">GAMES</a> |
-                <a href="">LIBRARY</a>
-                </div>
-                <a href="enlist-form.html"><button class="nav-button">ENLIST</button></a>
-            </nav>
-            </div>      
-        <div class="form-container">            
-            <div class="form-title">
-                <div class="odin-logo"></div>
-                <h1>ODIN</h1>
-            </div>
-            <div class="form-contents">
-                <form class ="form-body" action="" method="post">
-                    <div class="form-heading"><span><h1>Write Your Name In The Sands Of Time</h1>
-                    <h2>Join the ranks of Asgard Warriors Today!</h2></span></div>
-                    <div class="form-fields-background">
-
-                            <div class="name-fields">
-                                <div style="display: flex; flex-direction: column;">
-                                <label style ="font-size: 0.7rem;" for="first-name">FIRST NAME</label>
-                                <input class ="text-input" type="text" name="first-name" id="first-name" required>
-                                </div>
-                                <div style="display: flex; flex-direction: column;">
-                                <label style ="font-size: 0.7rem;" for="last-name">LAST NAME</label>
-                                <input class ="text-input" type="text" name="last-name" id="last-name" required>
-                                </div>
-                            </div>
-
-                            <div class="email-fields">
-                                <div style="display: flex; flex-direction: column;">
-                                <label style ="font-size: 0.7rem;" for="email">EMAIL</label>
-                                <input class ="text-input" type="email" name="email" id="email" oninvalid="this.setCustomValidity('Please Enter valid email')"
-                                oninput="setCustomValidity('')" required>
-                                </div>
-                                <div style="display: flex; flex-direction: column;">
-                                <label style ="font-size: 0.7rem;" for="phone-num">PHONE NO.</label>
-                                <input class ="text-input" type="text" name="phone-num" id="phone-num" required>
-                                </div>
-                            </div>
-
-                            <div class="password-fields">
-                                <div style="display: flex; flex-direction: column;">
-                                <label style ="font-size: 0.7rem;" for="password">PASSWORD</label>
-                                <input class ="text-input" type="password" name="password" id="password" required>
-                                </div>
-                                <div style="display: flex; flex-direction: column;">
-                                <label style ="font-size: 0.7rem;" for="confirm-pass">CONFIRM PASSWORD</label>
-                                <input class ="text-input" type="password" name="confirm-pass" id="confirm-pass" required>
-                                </div>
-                            </div>
-                            <div class="radio-field">
-                                <div class="radio-option">
-                                    <input type="radio" name="team-pick" id="loki" value="loki" checked>
-                                    <label for="loki">Team Loki</label>
-                                </div>
-                                <div class="radio-option">
-                                    <input type="radio" name="team-pick" id="thor" value="thor">
-                                    <label for="thor">Team Thor</label>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="button-div">
-                    <button id="submit-btn" type="submit">Submit</button>
-                    <p>Already have an Account?<a href=""><span> sign in</span></a></p>
-                    </div>
-                </form>
-            </div>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/form.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+  </head>
+  <body>
+    <div class="background-container">
+      <div class="nav-body">
+        <div class="logo">
+          <a href=""><img src="../images/odin-lined.png" /></a>
         </div>
+
+        <nav class="nav-header">
+          <div class="dropdown">
+            <button class="menu-button">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Home</a>
+              <a href="#">About</a>
+              <a href="#">Lore</a>
+              <a href="#">Tournaments</a>
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="../index.html">HOME</a> | <a href="">DASHBOARD</a> |
+            <a href="">ENTERTAINMENT</a> |
+            <a href="">LIBRARY</a>
+          </div>
+          <a href="enlist-form.html"
+            ><button class="nav-button">ENLIST</button></a
+          >
+        </nav>
+      </div>
+      <div class="form-container">
+        <div class="form-title">
+          <div class="odin-logo"></div>
+          <h1>ODIN</h1>
+        </div>
+        <div class="form-contents">
+          <form class="form-body" action="" method="post">
+            <div class="form-heading">
+              <span
+                ><h1>Write Your Name In The Sands Of Time</h1>
+                <h2>Join the ranks of Asgard Warriors Today!</h2></span
+              >
+            </div>
+            <div class="form-fields-background">
+              <div class="name-fields">
+                <div style="display: flex; flex-direction: column">
+                  <label style="font-size: 0.7rem" for="first-name"
+                    >FIRST NAME</label
+                  >
+                  <input
+                    class="text-input"
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    required
+                  />
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <label style="font-size: 0.7rem" for="last-name"
+                    >LAST NAME</label
+                  >
+                  <input
+                    class="text-input"
+                    type="text"
+                    name="last-name"
+                    id="last-name"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="email-fields">
+                <div style="display: flex; flex-direction: column">
+                  <label style="font-size: 0.7rem" for="email">EMAIL</label>
+                  <input
+                    class="text-input"
+                    type="email"
+                    name="email"
+                    id="email"
+                    oninvalid="this.setCustomValidity('Please Enter valid email')"
+                    oninput="setCustomValidity('')"
+                    required
+                  />
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <label style="font-size: 0.7rem" for="phone-num"
+                    >PHONE NO.</label
+                  >
+                  <input
+                    class="text-input"
+                    type="text"
+                    name="phone-num"
+                    id="phone-num"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="password-fields">
+                <div style="display: flex; flex-direction: column">
+                  <label style="font-size: 0.7rem" for="password"
+                    >PASSWORD</label
+                  >
+                  <input
+                    class="text-input"
+                    type="password"
+                    name="password"
+                    id="password"
+                    required
+                  />
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <label style="font-size: 0.7rem" for="confirm-pass"
+                    >CONFIRM PASSWORD</label
+                  >
+                  <input
+                    class="text-input"
+                    type="password"
+                    name="confirm-pass"
+                    id="confirm-pass"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="radio-field">
+                <div class="radio-option">
+                  <input
+                    type="radio"
+                    name="team-pick"
+                    id="loki"
+                    value="loki"
+                    checked
+                  />
+                  <label for="loki">Team Loki</label>
+                </div>
+                <div class="radio-option">
+                  <input type="radio" name="team-pick" id="thor" value="thor" />
+                  <label for="thor">Team Thor</label>
+                </div>
+              </div>
+            </div>
+            <div class="button-div">
+              <button id="submit-btn" type="submit">Submit</button>
+              <p>
+                Already have an Account?<a href=""><span> sign in</span></a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
     <script src="../scripts/form.js"></script>
-</body>
+  </body>
 </html>
