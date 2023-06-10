@@ -124,13 +124,14 @@ function submitFn(event) {
       indexCounter
     );
     indexCounter++;
-    formDiv.style.display = "none";
+
     overlayDiv.style.display = "none";
     titleText.value = "";
     authorText.value = "";
     yearText.value = "";
     readValue.value = "";
     formPrompter.style.setProperty("--prompt", '""');
+    formDiv.style.display = "none";
   } else {
     formPrompter.style.setProperty("--prompt", '"form not completed"');
   }
@@ -177,7 +178,7 @@ function createElement(title, author, year, readValue, color1, color2, index) {
 
   bookDiv.appendChild(bookTitle);
   bookDiv.appendChild(description);
-  gridObjects.prepend(bookDiv);
+  gridObjects.insertBefore(bookDiv, addBooksDiv);
 }
 
 function deleteBooks() {
@@ -186,16 +187,15 @@ function deleteBooks() {
   let element = document.querySelector(`div[data-Id= "${index}"]`);
   element.remove();
   updateIndex();
+  indexCounter--;
 }
 
 function updateIndex() {
   let bookIndexes = document.querySelectorAll(".indexed-books");
   let delBtnIndexes = document.querySelectorAll(".new-books");
-  let deleteBtnArray = Array.from(delBtnIndexes).reverse();
-  Array.from(bookIndexes)
-    .reverse()
-    .forEach((element, index) => {
-      element.setAttribute("data-Id", index);
-      deleteBtnArray[index].setAttribute("data-Id", index);
-    });
+  let deleteBtnArray = Array.from(delBtnIndexes);
+  Array.from(bookIndexes).forEach((element, index) => {
+    element.setAttribute("data-Id", index);
+    deleteBtnArray[index].setAttribute("data-Id", index);
+  });
 }
