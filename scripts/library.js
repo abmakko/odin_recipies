@@ -41,6 +41,7 @@ const yearText = document.querySelector('input[name= "year"]');
 const readValue = document.querySelector(".read-options");
 const gridObjects = document.querySelector(".suggestion-grid");
 
+const formPrompter = document.querySelector(".form-head");
 const addBooksDiv = document.querySelector(".add-box");
 
 function toggleRead() {
@@ -129,6 +130,9 @@ function submitFn(event) {
     authorText.value = "";
     yearText.value = "";
     readValue.value = "";
+    formPrompter.style.setProperty("--prompt", '""');
+  } else {
+    formPrompter.style.setProperty("--prompt", '"form not completed"');
   }
 
   event.preventDefault();

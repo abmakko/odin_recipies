@@ -377,3 +377,13 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
   }
 
+.form-head::before{
+    content: var(--prompt, "");
+    position: absolute;
+    transform: translate(-50%,-50%);
+    color: red;
+    top: 18%;
+    left: 57%;
+    font-size: 0.8rem;
+    width: 100%;
+}
