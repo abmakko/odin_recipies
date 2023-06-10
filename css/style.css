@@ -317,9 +317,7 @@ a:link{
 
 
 @media screen and (max-width: 500px) {
-    svg{
-        display: none;
-    }
+    
     .book-section-title h2 {
         font-size: 1rem;
         font-weight: 900;
